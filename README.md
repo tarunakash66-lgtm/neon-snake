@@ -1,54 +1,132 @@
-# NEON SNAKE — Classic Arcade. Modern Challenge.
+# 🐍 NEON SNAKE — Cyber Arena
 
-A polished browser-based Snake game created for the **Portfolio Building SEE Hackathon 2026 at REVA University**.
+### Classic Arcade. Modern Challenge.
 
-## Advanced Feature Set
-- Classic Snake movement with Arrow/WASD controls
-- Responsive neon Canvas rendering
-- Classic, Time Rush (90s), and Zen modes
-- Progressive levels and increasing speed
-- Dynamic obstacle generation
-- Combo multiplier scoring
-- Bonus food and particle effects
-- Power-ups: Shield, Slow-Mo, Magnet and Turbo
-- Persistent high score with Local Storage
-- Pause/resume and instant restart
-- Sound effects with mute control
+A modern cyberpunk-inspired Snake arcade game built with **HTML5 Canvas, CSS3 and JavaScript**.
+
+NEON SNAKE transforms the classic Snake experience into a fast-paced arcade arena with multiple game modes, dynamic obstacles, power-ups, progressive difficulty, combo scoring, neon visuals and cinematic game-over animations.
+
+---
+
+## 🎮 Live Demo
+
+🌐 **Play NEON SNAKE:**
+
+https://tarunakash66-lgtm.github.io/neon-snake/
+
+📦 **GitHub Repository:**
+
+https://github.com/tarunakash66-lgtm/neon-snake
+
+---
+
+## ✨ Key Features
+
+### 🎮 Multiple Game Modes
+
+- **Classic** — Traditional Snake gameplay with progressive difficulty.
+- **Time Rush** — Score as much as possible before time runs out.
+- **Survival** — Aggressive gameplay with increasing hazards.
+
+### 🎯 Difficulty System
+
+Choose between:
+
+- 🟢 Rookie
+- 🟠 Veteran
+- 🔴 Nightmare
+
+Higher difficulties increase movement speed and environmental hazards.
+
+### 🧱 Dynamic Obstacles
+
+The arena contains dangerous obstacles that become more challenging as the threat level increases.
+
+Players must carefully control the snake while avoiding:
+
+- Arena boundaries
+- Snake body
+- Static hazards
+- Increasing obstacle patterns
+
+### ⚡ Power-Ups
+
+Special power-ups can change the gameplay:
+
+- 🛡️ **Shield** — Temporary protection
+- ⚡ **Turbo** — Increased movement speed
+- 🧲 **Magnet** — Helps attract food
+- 🐌 **Slow-Mo** — Temporarily slows the game
+
+### 🏆 Combo Scoring
+
+Collect food continuously to build a combo multiplier and increase your score.
+
+### 📈 Progressive Difficulty
+
+The game dynamically increases its challenge through:
+
+- Faster movement
+- More obstacles
+- Higher threat levels
+- Increased survival pressure
+
+### 💀 Comedic Death System
+
+Game-over screens include contextual animations and messages depending on how the player dies.
+
+Examples:
+
+- 🧱 **WALL BONK!**
+- 🐍 **SELF-SABOTAGE!**
+- ⚡ **HAZARD SMACK!**
+- ⏱️ **TIME OUT!**
+
+Each animation is designed to remain inside the game-over panel without interrupting the overall game experience.
+
+### 🎨 Cyber Arena UI
+
+The interface uses a dark cyberpunk-inspired visual system featuring:
+
+- Red neon highlights
+- Purple/magenta accents
+- Cyan energy effects
+- Glowing arena elements
+- Animated particles
+- Visual impact effects
+
+### 📱 Responsive Controls
+
+Supports:
+
+- Keyboard controls
+- Arrow keys
+- WASD
 - Mobile swipe controls
-- Animated neon HUD, game states and screen shake
-- Touch-friendly responsive interface
 
-## Technology
-HTML5 • CSS3 • JavaScript • Canvas API • Local Storage • Web Audio API • Git/GitHub • GitHub Pages
+### 💾 High Score
 
-## Controls
-- Arrow keys / WASD — Move
-- Space / P / Esc — Pause / Resume
-- Swipe on the game board — Mobile movement
-- Sound button — Mute / unmute
-- Restart — Start a fresh run
+Player high scores are stored using browser **Local Storage**, allowing scores to persist between sessions.
 
-## Run locally
-Open `index.html` in a modern browser or use VS Code Live Server.
+---
 
-## Project Structure
+## 🧠 Game Architecture
+
 ```text
-neon-snake/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── game.js
-├── screenshots/
-├── README.md
-└── .gitignore
-```
-
-## Project Direction
-The core hackathon requirement remains a playable classic 2D arcade game with score tracking, increasing difficulty, and a game-over/restart flow. NEON SNAKE extends that core with modern progression, power-ups, game modes, effects, responsive controls and persistent scoring.
-
-## Team
-- Tarun Akash.D — Team Lead
-- Manikandan.M — Team Member
-- Section: AI&DS 'C'
-- Faculty Mentor: R. Swasthik
+PLAYER INPUT
+     ↓
+DIRECTION UPDATE
+     ↓
+GAME ENGINE
+     ↓
+MOVEMENT
+     ↓
+FOOD / POWER-UP CHECK
+     ↓
+COLLISION DETECTION
+     ↓
+SCORE + COMBO + LEVEL
+     ↓
+CANVAS RENDERING
+     ↓
+REPEAT GAME LOOP
