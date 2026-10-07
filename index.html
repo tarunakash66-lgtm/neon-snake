@@ -1,66 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEON SNAKE — Classic Arcade. Modern Challenge.</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#08050d"><title>NEON SNAKE — Cyber Arena</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="app">
-    <header class="topbar">
-      <div>
-        <div class="brand">NEON<span>SNAKE</span></div>
-        <div class="tagline">Classic Arcade. Modern Challenge.</div>
-      </div>
-      <div class="controls">
-        <button id="pauseBtn" class="secondary" disabled>PAUSE</button>
-        <button id="restartBtn" class="secondary">RESTART</button>
-      </div>
-    </header>
-
-    <section class="hud">
-      <div class="stat"><span>SCORE</span><strong id="score">0</strong></div>
-      <div class="stat"><span>LEVEL</span><strong id="level">1</strong></div>
-      <div class="stat"><span>HIGH SCORE</span><strong id="highScore">0</strong></div>
-      <div class="status" id="status">READY</div>
-    </section>
-
-    <section class="game-wrap">
-      <canvas id="game" width="600" height="600" aria-label="Neon Snake game"></canvas>
-
-      <div id="startOverlay" class="overlay">
-        <div class="panel">
-          <div class="logo">NEON SNAKE</div>
-          <p>Classic Arcade. Modern Challenge.</p>
-          <button id="startBtn" class="primary">PLAY NOW</button>
-          <small>Arrow keys / WASD to move</small>
-        </div>
-      </div>
-
-      <div id="pauseOverlay" class="overlay hidden">
-        <div class="panel">
-          <div class="logo">PAUSED</div>
-          <p>Your game is waiting.</p>
-          <button id="resumeBtn" class="primary">RESUME</button>
-        </div>
-      </div>
-
-      <div id="gameOverOverlay" class="overlay hidden">
-        <div class="panel">
-          <div class="logo danger">GAME OVER</div>
-          <p>Score: <strong id="finalScore">0</strong></p>
-          <button id="againBtn" class="primary">PLAY AGAIN</button>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span>HTML5 Canvas + JavaScript</span>
-      <span>Local Storage High Score</span>
-      <span>Portfolio Building SEE Hackathon 2026</span>
-    </footer>
-  </main>
-  <script src="js/game.js"></script>
-</body>
-</html>
+<div class="ambient"></div><div class="scanlines"></div>
+<main class="app">
+<header class="topbar">
+  <div><div class="brand"><span>NEON</span> SNAKE</div><div class="tagline">CYBER ARENA // CLASSIC ARCADE EVOLVED</div></div>
+  <div class="controls"><button id="soundBtn" class="icon-btn">🔊</button><button id="menuBtn" class="secondary">MENU</button><button id="pauseBtn" class="secondary" disabled>PAUSE</button><button id="restartBtn" class="secondary">RESTART</button></div>
+</header>
+<section class="hud">
+ <div class="stat"><span>SCORE</span><strong id="score">0</strong></div><div class="stat"><span>THREAT</span><strong id="level">1</strong></div><div class="stat"><span>COMBO</span><strong id="combo">x1</strong></div><div class="stat"><span>BEST</span><strong id="highScore">0</strong></div><div class="stat"><span>TIME</span><strong id="time">∞</strong></div><div class="status" id="status">SYSTEM READY</div>
+</section>
+<section class="game-wrap" id="gameWrap">
+ <canvas id="game" width="720" height="720" aria-label="Neon Snake cyber arena game"></canvas>
+ <div class="power-hud" id="powerHud"></div><div class="toast" id="toast"></div>
+ <div id="startOverlay" class="overlay"><div class="panel start-panel">
+   <div class="eyebrow">REVA UNIVERSITY • SEE HACKATHON 2026</div><div class="logo">NEON SNAKE</div>
+   <p>Enter the cyber arena. Hunt energy. Avoid hazards. Build the longest run.</p>
+   <div class="mode-grid">
+    <button class="mode active" data-mode="classic"><b>CLASSIC</b><small>Progressive hazards</small></button>
+    <button class="mode" data-mode="rush"><b>TIME RUSH</b><small>90 sec score attack</small></button>
+    <button class="mode" data-mode="survival"><b>SURVIVAL</b><small>Maximum hazard density</small></button>
+   </div>
+   <div class="difficulty-row">
+    <div class="difficulty"><span>ARENA PROTOCOL</span><b id="modeDescription">Progressive hazards + power-ups</b></div>
+    <div class="difficulty-select"><span>DIFFICULTY</span><div class="diff-grid">
+      <button class="diff active" data-diff="rookie"><b>ROOKIE</b><small>Relaxed</small></button>
+      <button class="diff" data-diff="veteran"><b>VETERAN</b><small>Balanced</small></button>
+      <button class="diff" data-diff="nightmare"><b>NIGHTMARE</b><small>Brutal</small></button>
+    </div></div>
+   </div>
+   <button id="startBtn" class="primary big">▶ DEPLOY SNAKE</button>
+   <div class="key-hint">ARROWS / WASD • SPACE / P / ESC = PAUSE • SWIPE ON MOBILE</div>
+ </div></div>
+ <div id="pauseOverlay" class="overlay hidden"><div class="panel"><div class="logo">SYSTEM PAUSED</div><p>Run state secured. Resume when ready.</p><button id="resumeBtn" class="primary big">RESUME RUN</button><button id="pauseMenuBtn" class="secondary big menu-action">↩ BACK TO MENU</button></div></div>
+ <div id="gameOverOverlay" class="overlay hidden"><div class="panel gameover-panel"><div class="eyebrow" id="endEyebrow">RUN TERMINATED</div><div class="logo danger">GAME OVER</div><div class="death-card"><canvas id="deathScene" width="440" height="125" aria-label="Comical snake death animation"></canvas><div class="death-title" id="deathTitle">WALL BONK!</div><div class="death-message" id="deathMessage">The snake met the wall. The wall won.</div></div><div class="result-grid"><div><span>SCORE</span><b id="finalScore">0</b></div><div><span>BEST</span><b id="finalBest">0</b></div><div><span>THREAT</span><b id="finalLevel">1</b></div></div><div id="achievement" class="achievement hidden">◆ NEW HIGH SCORE</div><div class="end-actions"><button id="againBtn" class="primary big">↻ REDEPLOY</button><button id="gameOverMenuBtn" class="secondary big menu-action">↩ BACK TO MENU</button></div></div></div>
+</section>
+<section class="legend"><span><i class="dot food"></i> ENERGY +10</span><span><i class="dot bonus"></i> CORE +50</span><span>⚡ TURBO</span><span>🛡 SHIELD</span><span>🧲 MAGNET</span><span>⏱ SLOW-MO</span><span>▣ HAZARD</span></section>
+<footer><span>HTML5 CANVAS • JAVASCRIPT • LOCAL STORAGE</span><span id="runInfo">MODE: CLASSIC</span><span>NEON SNAKE v3.0 // CYBER ARENA</span></footer>
+</main><script src="js/game.js"></script>
+</body></html>

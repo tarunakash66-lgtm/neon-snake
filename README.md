@@ -1,61 +1,54 @@
-# NEON SNAKE
+# NEON SNAKE — Classic Arcade. Modern Challenge.
 
-**Classic Arcade. Modern Challenge.**
+A polished browser-based Snake game created for the **Portfolio Building SEE Hackathon 2026 at REVA University**.
 
-A browser-based Snake game built for the **Portfolio Building SEE Hackathon 2026 at REVA University**.
-
-## Current MVP
-
-- Snake movement
-- Keyboard controls (Arrow keys / WASD)
-- Food and snake growth
-- Score
-- Level progression
-- Increasing speed
-- Dynamic obstacles at higher levels
-- Bonus food
-- High-score persistence using Local Storage
-- Start screen
-- Pause/resume
-- Game over
-- Restart
-- Responsive neon arcade UI
+## Advanced Feature Set
+- Classic Snake movement with Arrow/WASD controls
+- Responsive neon Canvas rendering
+- Classic, Time Rush (90s), and Zen modes
+- Progressive levels and increasing speed
+- Dynamic obstacle generation
+- Combo multiplier scoring
+- Bonus food and particle effects
+- Power-ups: Shield, Slow-Mo, Magnet and Turbo
+- Persistent high score with Local Storage
+- Pause/resume and instant restart
+- Sound effects with mute control
+- Mobile swipe controls
+- Animated neon HUD, game states and screen shake
+- Touch-friendly responsive interface
 
 ## Technology
-
-- HTML5
-- CSS3
-- JavaScript
-- HTML5 Canvas API
-- Browser Local Storage
-- Git / GitHub
-
-## Run locally
-
-Open `index.html` in a modern browser.
-
-For the best local development experience, use VS Code Live Server or another simple static server.
+HTML5 • CSS3 • JavaScript • Canvas API • Local Storage • Web Audio API • Git/GitHub • GitHub Pages
 
 ## Controls
-
 - Arrow keys / WASD — Move
-- Space — Pause / Resume
-- Restart button — New game
+- Space / P / Esc — Pause / Resume
+- Swipe on the game board — Mobile movement
+- Sound button — Mute / unmute
+- Restart — Start a fresh run
 
-## Project direction
+## Run locally
+Open `index.html` in a modern browser or use VS Code Live Server.
 
-The hackathon requirement is a playable classic 2D game with score tracking, increasing difficulty, and a game-over/restart flow. NEON SNAKE keeps the classic gameplay simple while adding modern progression and a neon interface.
+## Project Structure
+```text
+neon-snake/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── game.js
+├── screenshots/
+├── README.md
+└── .gitignore
+```
 
-## Planned post-MVP enhancements
-
-- More obstacle patterns
-- Better animations
-- Sound effects/music
-- Mobile touch controls
-- Additional game modes
-- Online leaderboard
-- Multiplayer
+## Project Direction
+The core hackathon requirement remains a playable classic 2D arcade game with score tracking, increasing difficulty, and a game-over/restart flow. NEON SNAKE extends that core with modern progression, power-ups, game modes, effects, responsive controls and persistent scoring.
 
 ## Team
-
-Add all official team members before final submission.
+- Tarun Akash.D — Team Lead
+- Manikandan.M — Team Member
+- Section: AI&DS 'C'
+- Faculty Mentor: R. Swasthik
