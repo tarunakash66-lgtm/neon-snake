@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON SNAKE — Classic Arcade. Modern Challenge.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">NEON<span>SNAKE</span></div>
+        <div class="tagline">Classic Arcade. Modern Challenge.</div>
+      </div>
+      <div class="controls">
+        <button id="pauseBtn" class="secondary" disabled>PAUSE</button>
+        <button id="restartBtn" class="secondary">RESTART</button>
+      </div>
+    </header>
+
+    <section class="hud">
+      <div class="stat"><span>SCORE</span><strong id="score">0</strong></div>
+      <div class="stat"><span>LEVEL</span><strong id="level">1</strong></div>
+      <div class="stat"><span>HIGH SCORE</span><strong id="highScore">0</strong></div>
+      <div class="status" id="status">READY</div>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="game" width="600" height="600" aria-label="Neon Snake game"></canvas>
+
+      <div id="startOverlay" class="overlay">
+        <div class="panel">
+          <div class="logo">NEON SNAKE</div>
+          <p>Classic Arcade. Modern Challenge.</p>
+          <button id="startBtn" class="primary">PLAY NOW</button>
+          <small>Arrow keys / WASD to move</small>
+        </div>
+      </div>
+
+      <div id="pauseOverlay" class="overlay hidden">
+        <div class="panel">
+          <div class="logo">PAUSED</div>
+          <p>Your game is waiting.</p>
+          <button id="resumeBtn" class="primary">RESUME</button>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="panel">
+          <div class="logo danger">GAME OVER</div>
+          <p>Score: <strong id="finalScore">0</strong></p>
+          <button id="againBtn" class="primary">PLAY AGAIN</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>HTML5 Canvas + JavaScript</span>
+      <span>Local Storage High Score</span>
+      <span>Portfolio Building SEE Hackathon 2026</span>
+    </footer>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
